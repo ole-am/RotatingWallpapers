@@ -1,0 +1,21 @@
+{
+  "translations": {
+    "Set custom templates for the document generation": "Set custom templates for the document generation",
+    "Images": "Images",
+    "Upload image": "Upload image",
+    "Rotation": "Rotation",
+    "How often should the images change?": "How often should the images change?",
+    "Every 10 seconds (testing purposes)": "Every 10 seconds (testing purposes)",
+    "Every 5 minutes": "Every 5 minutes",
+    "Every 30 minutes": "Every 30 minutes",
+    "Every hour": "Every hour",
+    "Every 3 hours": "Every 3 hours",
+    "Daily": "Daily",
+    "Users": "Users",
+    "It is recommended to disable user customization": "It is recommended to disable user customization",
+    "Navigate to Theming-Settings": "Navigate to Theming-Settings",
+    "Public": "Public",
+    "Set a dedicated image for all guests": "Set a dedicated image for all guests"
+  },
+  "pluralForm": "nplurals=2; plural=(n != 1);"
+}
