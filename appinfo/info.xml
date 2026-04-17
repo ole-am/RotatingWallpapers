@@ -16,8 +16,7 @@
 	<category>customization</category>
     <website>https://github.com/ole-am/RotatingWallpapers</website>
     <bugs>https://github.com/ole-am/RotatingWallpapers/issues</bugs>
-	    <screenshot small-thumbnail="https://raw.githubusercontent.com/ole-am/RotatingWallpapers/refs/heads/main/screenshot-admin-thumbnail.png">https://raw.githubusercontent.com/ole-am/RotatingWallpapers/refs/heads/main/screenshot-admin-thumbnail.png</screenshot>
-    <screenshot>https://raw.githubusercontent.com/ole-am/RotatingWallpapers/refs/heads/main/screenshot-admin-1.png</screenshot>
+	<screenshot small-thumbnail="https://raw.githubusercontent.com/ole-am/RotatingWallpapers/refs/heads/main/screenshot-admin-thumbnail.png">https://raw.githubusercontent.com/ole-am/RotatingWallpapers/refs/heads/main/screenshot-admin-1.png</screenshot>
     <screenshot>https://raw.githubusercontent.com/ole-am/RotatingWallpapers/refs/heads/main/screenshot-admin-2.png</screenshot>
 	<dependencies>
 		<nextcloud min-version="31" max-version="33"/>
