@@ -20,6 +20,7 @@
                     ref="uploadFileInput"
                     type="file"
                     accept="image/*"
+                    multiple
                     class="hidden-file-input"
                     @change="uploadImage">
                 <NcButton @click="uploadFileInput?.click()">

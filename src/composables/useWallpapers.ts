@@ -19,18 +19,30 @@ export function useWallpapers() {
 	async function uploadImage() {
 		if (!uploadFileInput.value?.files?.length) return
 
-		const file = uploadFileInput.value.files[0] as File
-		const formData = new FormData()
-		formData.append('file', file)
+		const files = Array.from(uploadFileInput.value.files)
+		let errorMsg: string | null = null
+
+		for (const file of files) {
+			const formData = new FormData()
+			formData.append('file', file)
+
+			try {
+				await axios.post(generateOcsUrl('apps/rotatingwallpapers/uploadWallpaper'), formData)
+			} catch (e: unknown) {
+				const msg = (e as { response?: { data?: { ocs?: { data?: { error?: string } } } } })
+					?.response?.data?.ocs?.data?.error ?? 'Upload fehlgeschlagen'
+				errorMsg = msg
+			}
+		}
 
 		try {
-			await axios.post(generateOcsUrl('apps/rotatingwallpapers/uploadWallpaper'), formData)
 			await loadWallpapers()
-		} catch (e: unknown) {
-			const msg = (e as { response?: { data?: { ocs?: { data?: { error?: string } } } } })
-				?.response?.data?.ocs?.data?.error ?? 'Upload fehlgeschlagen'
-			alert(msg)
+		} catch {
+			// ignore error loading wallpapers
 		} finally {
+			if (errorMsg) {
+				alert(errorMsg)
+			}
 			if (uploadFileInput.value) uploadFileInput.value.value = ''
 		}
 	}
